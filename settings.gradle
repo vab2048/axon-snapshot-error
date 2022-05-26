@@ -1,0 +1,4 @@
+rootProject.name = 'axon-snapshot-error'
+
+include 'axon-example-app-message-api'
+include 'axon-example-app'
