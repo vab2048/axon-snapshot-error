@@ -2,6 +2,12 @@
 
 This repo is an attempt to replicate an error when snapshots are taken and to understand why this occurs.
 
+## Update
+
+The error occurred because the Jackson serializer was unable to serialize/deserialize the state of the aggregate.
+
+This was because no getters/setters were exposed. This has now been fixed and this repo works. The error no longer occurs. 
+
 ## Usage
 
 1. Have a local postgres DB running and set up.

@@ -31,6 +31,26 @@ public class AccountAggregate {
      */
     private long balance;
 
+    // Since we are using Jackson as a serializer we unfortunately need getters and setters for each field
+    // otherwise state will not be persisted when we take a snapshot.
+
+
+    public UUID getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(UUID accountId) {
+        this.accountId = accountId;
+    }
+
+    public long getBalance() {
+        return balance;
+    }
+
+    public void setBalance(long balance) {
+        this.balance = balance;
+    }
+
     @Deprecated
     AccountAggregate() { /* For framework use only. */ }
 
